@@ -47,11 +47,12 @@ python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 export DJANGO_SETTINGS_MODULE=openunited.settings.development
+export DJANGO_SECRET_KEY=<the key you made>
 ./setup.sh
 ```
+You should set DJANGO_SETTINGS_MODULE and DJANGO_SECRET_KEY in your profile settings so they load in each terminal session. 
 
-Note: above you ran `export DJANGO_SETTINGS_MODULE=openunited.settings.development`
-
+Above you ran `export DJANGO_SETTINGS_MODULE=openunited.settings.development`
 This is using the development settings in `openunited/settings/development.py`
 
 You can also create a `local.py` in `openunited/settings` and import `base.py` or `development.py` as you wish. If you want, you can use `development.py` as well.
